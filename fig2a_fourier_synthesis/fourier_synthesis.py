@@ -8,7 +8,7 @@ from le_dynamics import LEDynamics
 from le_abstract_net import LEAbstractNet
 
 
-class LESinNet(LEAbstractNet, torch.nn.Module):
+class LEFourierSynthesisNet(LEAbstractNet, torch.nn.Module):
 
     def __init__(self, *, tau, dt, in_channels, tau_e):
         super().__init__()
@@ -56,7 +56,7 @@ if __name__ == '__main__':
 
     time = torch.arange(time_steps) * params['dt'] * 1e-3
 
-    model = LESinNet(tau=params['tau'], dt=params['dt'], in_channels=len(params['frequencies']), tau_e=0.0)
+    model = LEFourierSynthesisNet(tau=params['tau'], dt=params['dt'], in_channels=len(params['frequencies']), tau_e=0.0)
     optimizer = torch.optim.SGD(model.parameters(), lr=params['dt'] * params['lr'])
 
     with torch.no_grad():
@@ -75,6 +75,6 @@ if __name__ == '__main__':
     subsampling_steps = 100
     plt.plot(time[::subsampling_steps], target[::subsampling_steps], color='k')
     plt.plot(time[::subsampling_steps], history[::subsampling_steps, 2])
-    plt.savefig('le_sin.pdf')
+    plt.savefig('le_fourier_synthesis.pdf')
 
     np.save('le_sin.npy', history.detach().numpy())
