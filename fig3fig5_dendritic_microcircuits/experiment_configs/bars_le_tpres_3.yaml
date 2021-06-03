@@ -1,0 +1,51 @@
+- bias:
+    'on': false
+    val: 0.0
+  dims:
+  - 9
+  - 30
+  - 3
+  dt: 0.1
+  eta:
+    ip:
+    - 0.67
+    - 0
+    pi:
+    - 0.0
+    - 0
+    up:
+    - 1.67
+    - 0.3333
+  ga: 0.06
+  gb: 0.1
+  gd: 0.1
+  gl: 0.03
+  gsom: 0.06
+  init_weights:
+    down: 1
+    ip: 1
+    pi: 1
+    up: 1
+  latent_eq: true
+  learning_lag: 0
+  noise: 0
+  out_lag: 0.0
+  reset_deltas: false
+  t_pattern: 0.3
+  tau_0: 0.1
+  tau_w: 0.1
+- classify: true
+  eval_metric: accuracy
+  init_selfpred: true
+  n_epochs: 1000
+  n_val_samples: 8
+  n_vals_per_epoch: 1
+  record_dt: 0.1
+  recorded_quants:
+  - - inn_soma
+    - pyr_apical
+  - - pyr_soma
+  seed: 12354
+  snapshot_epochs: null
+  u_tgt_high: 1.0
+  u_tgt_low: 0.1
