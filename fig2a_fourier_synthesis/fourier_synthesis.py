@@ -77,4 +77,4 @@ if __name__ == '__main__':
     plt.plot(time[::subsampling_steps], history[::subsampling_steps, 2])
     plt.savefig('le_fourier_synthesis.pdf')
 
-    np.save('le_sin.npy', history.detach().numpy())
+    np.save('le_fourier_synthesis.npy', history.detach().numpy())
