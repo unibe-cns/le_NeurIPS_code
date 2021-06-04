@@ -17,8 +17,8 @@ cd fig2b_fig4ac_mnist/src/
 /bin/bash 2b_jobs.sh
 ```
 
-The results of each run will be saved in 
-`fig2b_fig4ac_mnist/runs/{run_number}/`.
+The results of each run, that is for example metrics, output and configurations,
+will be saved in `fig2b_fig4ac_mnist/runs/{run_number}/`.
 
 For the experiment in Fig.4 replace `2b_jobs.sh` with `4a_jobs.sh` or
 `4c_jobs.sh` respectively
