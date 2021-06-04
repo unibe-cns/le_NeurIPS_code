@@ -58,10 +58,10 @@ For the experiment in Fig.5 replace `run_bars.py` with `run_single_mc.py`
 cd fig3fig5_dendritic_microcircuits/src/
 python3 run_bars.py eval ../experiment_results/{results_dir_of_run_to_be_evaluated}
 ```
-This will generate plots of the results (depending on how many variables you configured to be recorded, more or less plots can be generated).
+This will generate plots of the results (depending on how many variables you configured to be recorded, more or less plots can be generated) and save them in the respective results directory.
 Which plots are plotted is defined in `run_X.py`
 
 **Reproduce all data needed for Fig3:**
 
 For the results shown in Fig.3 all config files with the name `bars_*.yaml` need to be run for 10 different seeds (configurable in the config file).
-The seeds chosen for the paper were `[12345, 12346, 12347, 12348, 12349, 12350, 12351, 12352, 12353]`.
+The seeds chosen for the paper were `[12345, 12346, 12347, 12348, 12349, 12350, 12351, 12352, 12353, 12354]`.
