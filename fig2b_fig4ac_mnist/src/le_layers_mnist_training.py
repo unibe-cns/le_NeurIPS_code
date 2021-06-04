@@ -181,18 +181,6 @@ class MnistTrainer:
         val_x, val_y = [x for x, _ in self.val_dataset], [y for _, y in self.val_dataset]
         accuracies = []
 
-        # print("Adapting time constants...")
-        # for i, l in enumerate(network.layers):
-        #     l.train_τ = True
-        #     print(f"Δτ in layer {i} before adaptation: ", torch.mean(torch.abs(l.tau_m - l.tau)))
-        #     while torch.mean(torch.abs(l.tau_m - l.tau)) > 0.01:
-        #         y_hat = network.predict(val_x, batch_size=batch_size, n_updates=self.n_updates, verbose=verbose if verbose >= 3 else 0)
-        #         if verbose >= 2:
-        #             print(f"Δτ in layer {i} = ", torch.mean(torch.abs(l.tau_m - l.tau)))
-        #     print(f"Δτ in layer {i} after adaptation: ", torch.mean(torch.abs(l.tau_m - l.tau)))
-        #     l.train_τ = False
-        # quick solution for this method only
-
         # learn time constants before actual training
         if network.adapt_tau:
             network.adapt_timeconstants(val_x, batch_size=batch_size, verbose=verbose if verbose >= 3 else 0)

@@ -7,7 +7,6 @@ from datetime import datetime
 
 import numpy as np
 import torch
-import model.layered_torch_utils as tu
 
 from model.network_params import ModelVariant, TargetType, LayeredParams
 
@@ -323,7 +322,6 @@ class LESequential(object):
             self.errors.append(torch.zeros([1, l.target_size], device=self.device))
 
         self.dummy_label = torch.zeros([1, self.layers[-1].target_size], device=self.device)
-        # TODO: implement multiple LPFs?
         self.target = torch.zeros([1, self.layers[-1].target_size], device=self.device)
 
         self.model_variant = params.model_variant
@@ -345,8 +343,6 @@ class LESequential(object):
         """
         np.random.seed(rnd_seed)
         torch.manual_seed(rnd_seed)
-        # TODO: training with sacred yields exactly the same results
-        # but w/o sacred that is not the case
 
     def train(self):
         """
@@ -392,15 +388,7 @@ class LESequential(object):
         elif not self.train_W:
             targets = self.dummy_label
         elif self.target_lpf:
-            # perform 1 LPF with n*τ_syn
             self.target += (targets - self.target) * self.dt / (len(self.layers) * self.tau_s)
-
-            # TODO: remove or keep?
-            # n LPFs with τ_syn each
-            # self.target[0] = targets.clone()
-            # for layer in range(len(self.layers) - 1):
-            #     dot_target = (self.target[layer] - self.target[layer + 1]) / self.tau_s
-            #     self.target[layer + 1] += self.dt * dot_target
         else:
             self.target = targets.clone()
 
