@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # train MNIST with latent equilibrium model
 # and track experiment using sacred
-# by Paul Haider
 
 import torch
 

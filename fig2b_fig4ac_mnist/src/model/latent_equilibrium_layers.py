@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # PyTorch implementation of the Latent Equilibrium model for different layers.
 
-# Authors: Benjamin Ellenberger (benelot@github) & Paul Haider (paulhaider@gihub)
-
 from datetime import datetime
 
 import numpy as np

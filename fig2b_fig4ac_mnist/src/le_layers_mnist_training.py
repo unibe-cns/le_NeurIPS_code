@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 # train MNIST with layered latent equilibrium implementation
-# by Benjamin Ellenberger & Paul Haider
 
 import random
 import numpy as np
