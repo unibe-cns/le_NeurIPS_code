@@ -9,7 +9,7 @@ The experiments are configured using config files.
 All config files required for the production of the plotted results are in `fig3fig5_dendritic_microcircuits/experiment_configs/`.
 The naming scheme of the config files is as follows `{task name}_{with LE or not}_tpres_{tpres in unit dt}.yaml` where `task name` is `bars` (Fig.3) or `mimic` (Fig.5) and `with LE or not` is either `le` or `orig`.
 
-For each run the results will be saved in `fig3fig5_dendritic_microcircuits/experiment_configs/{config file name}_{timestamp}/`.
+For each run the results will be saved in `fig3fig5_dendritic_microcircuits/experiment_results/{config file name}_{timestamp}/`.
 
 **To run an experiment:**
 ```
