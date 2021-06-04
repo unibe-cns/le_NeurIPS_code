@@ -74,13 +74,12 @@ class Linear(object):
         if self.tau_width != 0:
             self.tau *= torch.empty(self.target_size).normal_(mean=1.0, std=self.tau_width).to(self.device)
             self.tau_m *= torch.empty(self.target_size).normal_(mean=1.0, std=self.tau_width).to(self.device)
+            # clip time constants to prevent them from being < 0
+            self.tau = torch.clip(self.tau, 1, 1000)
+            self.tau_m = torch.clip(self.tau_m, 1, 1000)
         else:
             self.tau *= torch.ones(self.target_size).to(self.device)
             self.tau_m *= torch.ones(self.target_size).to(self.device)
-
-        # clip time constants to prevent them from being < 0
-        # self.tau = torch.clip(self.tau, 1, 1000)
-        # self.tau_m = torch.clip(self.tau_m, 1, 1000)
 
     def train(self):
         """
@@ -116,8 +115,6 @@ class Linear(object):
             self.filtered_rates = torch.repeat_interleave(self.filtered_rates, repetition_vector, dim=0).clone()
             self.filtered_errors = torch.repeat_interleave(self.filtered_errors, repetition_vector, dim=0).clone()
 
-    # TODO: I still don't like the name too much as this does not correspond to a forward pass
-    # and would rather use something like 'layer_step' or 'layer_update'
     def forward(self, rho, rho_deriv):
         self.rho_input = rho.clone()
 
