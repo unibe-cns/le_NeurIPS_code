@@ -3,14 +3,11 @@
 ### Code for FC MNIST experiments (Fig.2b and 4ac)
 The code can be found in `fig2b_fig4ac_mnist/src/`.
 
-The experiments are configured using a different config files for each panel.
-There is also a bash script that starts all the necessary experiments for
+Different experiments are configured using a different config files for each
+panel. There is also a bash script that starts all the necessary experiments for
 different seeds, loading the corresponding parameters and/or specifing different
 parameters for different runs (careful since these scripts might hundreds of
 jobs at once to be executed on a cluster.)
-
-The results of each run will be saved in
-`fig3fig5_dendritic_microcircuits/runs/{run_number}/`.
 
 **Running the experiments:**
 For example, in order to run all the experiments needed to reproduce Fig. 2b,
@@ -19,6 +16,10 @@ execute:
 cd fig2b_fig4ac_mnist/src/
 /bin/bash 2b_jobs.sh
 ```
+
+The results of each run will be saved in 
+`fig2b_fig4ac_mnist/runs/{run_number}/`.
+
 For the experiment in Fig.4 replace `2b_jobs.sh` with `4a_jobs.sh` or
 `4c_jobs.sh` respectively
 
