@@ -1,5 +1,7 @@
-torch
+# conda install pytorch==1.7.1 torchvision cudatoolkit=10.1 -c pytorch
+torch==1.7.1
 numpy
 matplotlib
 sacred
 sklearn
+pandas
