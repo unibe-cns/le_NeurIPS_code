@@ -1,5 +1,16 @@
 # le_NeurIPS_code
 
+### Code for HIGGS, MNIST and CIFAR10 with and without LE (Fig. 2cde).
+
+The code can be found in `fig2cde_higgs_mnist_cifar10`.
+
+The code configuration is integrated into the main files and only a few parameters are configured via argparse.
+
+To run the code, check the respective `submit_python_*_v100.sh` file which contains examples and all run configurations for all seeds used.
+
+The seeds for all runs are always 1, 2, 3, 5, 7, 8, 13, 21, 34. (Fibonacci + lucky number 7), resulting in 9 seeds for each experiment.
+
+Results can be found in the respective log file produced from the std out of the running code via `python -u *_training.py > file.log`.
 
 ### Code for Dendritic Microcircuits with and without LE (Fig.3 and 5)
 
