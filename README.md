@@ -23,6 +23,7 @@ will be saved in `fig2b_fig4ac_mnist/runs/{run_number}/`.
 For the experiment in Fig.4 replace `2b_jobs.sh` with `4a_jobs.sh` or
 `4c_jobs.sh` respectively
 
+The seeds chosen for these experiments were `42 69 12345 98765 38274 28374 42848 48393 83475 57381`.
 
 ### Code for HIGGS, MNIST and CIFAR10 with and without LE (Fig. 2cde).
 
@@ -32,7 +33,7 @@ The code configuration is integrated into the main files and only a few paramete
 
 To run the code, check the respective `submit_python_*_v100.sh` file which contains examples and all run configurations for all seeds used.
 
-The seeds for all runs are always 1, 2, 3, 5, 7, 8, 13, 21, 34. (Fibonacci + lucky number 7), resulting in 9 seeds for each experiment.
+The seeds chosen for these experiments were `1, 2, 3, 5, 7, 8, 13, 21, 34`. (Fibonacci + lucky number 7), resulting in 9 seeds for each experiment.
 
 Results can be found in the respective log file produced from the std out of the running code via `python -u *_training.py > file.log`.
 
@@ -64,4 +65,4 @@ Which plots are plotted is defined in `run_X.py`
 **Reproduce all data needed for Fig3:**
 
 For the results shown in Fig.3 all config files with the name `bars_*.yaml` need to be run for 10 different seeds (configurable in the config file).
-The seeds chosen for the paper were `[12345, 12346, 12347, 12348, 12349, 12350, 12351, 12352, 12353, 12354]`.
+The seeds chosen for these experiments were `12345, 12346, 12347, 12348, 12349, 12350, 12351, 12352, 12353, 12354`.
