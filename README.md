@@ -1,15 +1,19 @@
 # Latent Equilibrium: A unified learning theory for arbitrarily fast computation with arbitrarily slow neurons
 
-This repository contains the code to reproduce the results of the NeurIPS 2021 submission "Latent Equilibrium: A unified learning theory for arbitrarily fast computation with arbitrarily slow neurons".
+This repository contains the code to reproduce the results of the NeurIPS 2021 submission "Latent Equilibrium: A unified learning theory for arbitrarily fast computation with arbitrarily slow neurons" (also available on [arXiv](https://arxiv.org/abs/2110.14549)).
+
+## Requirements
+
+To install requirements:
+
+```setup
+pip install -r requirements.txt
+```
+
+## Training & Evaluation
 
 ### Code for FC MNIST experiments (Fig.2b and 4ac)
 The code can be found in `fig2b_fig4ac_mnist/src/`.
-
-Different experiments are configured using a different config files for each
-panel. There is also a bash script that starts all the necessary experiments for
-different seeds, loading the corresponding parameters and/or specifying different
-parameters for different runs (careful since these scripts might hundreds of
-jobs at once to be executed on a cluster.)
 
 **Running the experiments:**
 For example, in order to run all the experiments needed to reproduce Fig. 2b,
@@ -68,3 +72,7 @@ Which plots are plotted is defined in `run_X.py`
 
 For the results shown in Fig.3 all config files with the name `bars_*.yaml` need to be run for 10 different seeds (configurable in the config file).
 The seeds chosen for these experiments were `12345, 12346, 12347, 12348, 12349, 12350, 12351, 12352, 12353, 12354`.
+
+## Contributing
+
+>📋  TODO: Pick a licence and describe how to contribute to your code repository.
