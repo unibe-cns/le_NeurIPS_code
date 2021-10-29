@@ -1,11 +1,13 @@
-# le_NeurIPS_code
+# Latent Equilibrium: A unified learning theory for arbitrarily fast computation with arbitrarily slow neurons
+
+This repository contains the code to reproduce the results of the NeurIPS 2021 submission "Latent Equilibrium: A unified learning theory for arbitrarily fast computation with arbitrarily slow neurons".
 
 ### Code for FC MNIST experiments (Fig.2b and 4ac)
 The code can be found in `fig2b_fig4ac_mnist/src/`.
 
 Different experiments are configured using a different config files for each
 panel. There is also a bash script that starts all the necessary experiments for
-different seeds, loading the corresponding parameters and/or specifing different
+different seeds, loading the corresponding parameters and/or specifying different
 parameters for different runs (careful since these scripts might hundreds of
 jobs at once to be executed on a cluster.)
 
