@@ -2,6 +2,9 @@
 
 This repository contains the code to reproduce the results of the NeurIPS 2021 submission "Latent Equilibrium: A unified learning theory for arbitrarily fast computation with arbitrarily slow neurons" (also available on [arXiv](https://arxiv.org/abs/2110.14549)).
 
+### Warning: Patent Protection Notice
+This code repository contains procedures that are registered for patent protection. Unauthorized use, reproduction, or distribution of this code or its underlying procedures may infringe on our patent rights.
+
 ## Requirements
 
 To install requirements:
