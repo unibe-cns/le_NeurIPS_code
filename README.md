@@ -1,6 +1,6 @@
 # Latent Equilibrium: A unified learning theory for arbitrarily fast computation with arbitrarily slow neurons
 
-This repository contains the code to reproduce the results of the NeurIPS 2021 submission "Latent Equilibrium: A unified learning theory for arbitrarily fast computation with arbitrarily slow neurons" (also available on [arXiv](https://arxiv.org/abs/2110.14549)).
+This repository contains the code to reproduce the results of the [NeurIPS 2021 submission "Latent Equilibrium: A unified learning theory for arbitrarily fast computation with arbitrarily slow neurons"](https://proceedings.neurips.cc/paper/2021/hash/94cdbdb84e8e1de8a725fa2ed61498a4-Abstract.html) (also available on [arXiv](https://arxiv.org/abs/2110.14549)).
 
 ### Warning: Patent Protection Notice
 This code repository contains procedures that are registered for patent protection. Unauthorized use, reproduction, or distribution of this code or its underlying procedures may infringe on our patent rights.
